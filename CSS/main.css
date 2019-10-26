@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Aleo&display=swap");
+
+@import url("../CSS/normalize.css");
+
+body {
+    max-width: 1770px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.head {
+    text-align: center;
+    height: 740px;
+    background-image: url("../IMG/imgsection1.jpg");
+    background-position: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.head-h1 {
+    font-size: 48px;
+    padding-top: 12%;
+    padding-bottom: 0.5%;
+    margin: 0;
+}
+
+.head-p {
+    margin: 0;
+    letter-spacing: 4.5px;
+}
+
+.head form {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.head form input {
+    display: inline-block;
+    width: 500px;
+    height: 60px;
+    box-sizing: border-box;
+    padding-left: 9%;
+    font-size: 16px;
+}
+
+.head form button {
+    display: inline-block;
+    width: 145px;
+    height: 60px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    background-color: #5474fd;
+    color: white;
+    font-family: 'Aleo', serif;
+    font-size: 14px;
+    position: relative;
+}
+
+.head form button img {
+    display: inline-block;
+    position: absolute;
+    right: 10%;
+    top: 34%;
+}
+
+.scroll {
+    margin-top: 10%;
+}
+
+.scroll p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.scroll:hover {
+    transform: scale(0.9);
+}
+
+aside {
+    height: 80px;
+    background-color: #5474fd;
+}
