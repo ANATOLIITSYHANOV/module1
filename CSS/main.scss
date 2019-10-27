@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Aleo&display=swap');
-@import url('../CSS/normalize.css');
+@import 'normalize.scss';
+@import 'variables.scss';
 
 body{
   max-width: 1770px;
@@ -11,31 +12,25 @@ body{
 
 a{
   text-decoration: none;
-  color: black;
 }
 
-.head{
+#head{
   text-align: center;
   height: 740px;
   background-image: url('../IMG/imghead.jpg');
   background-position: center;
   color: white;
   font-size: 22px;
-}
-
-.head-h1{
-  font-size: 48px;
-  padding-top: 12%;
-  padding-bottom: 0.5%;
-  margin: 0;
-}
-
-.head-p{
-  margin: 0;
-  letter-spacing: 4.5px;
-}
-
-.head{
+  h1{
+    font-size: 48px;
+    padding-top: 12%;
+    padding-bottom: 0.5%;
+    margin: 0;
+  }
+  p{
+    margin: 0;
+    letter-spacing: 4.5px;
+  }
   form{
     margin-top: 2%;
     display: flex;
@@ -45,6 +40,7 @@ a{
       display: inline-block;
       width: 500px;
       height: 60px;
+      border: 2px solid white;
       box-sizing: border-box;
       padding-left: 9%;
       font-size: 16px;
@@ -53,6 +49,8 @@ a{
       display: inline-block;
       width: 145px;
       height: 60px;
+      border: none;
+      outline: none;
       border: 2px solid white;
       box-sizing: border-box;
       background-color: #5474fd;
@@ -60,6 +58,9 @@ a{
       font-family: 'Aleo', serif;
       font-size: 14px;
       position: relative;
+      &:active img{
+        transform: scale(1.2);
+      }
       img{
         display: inline-block;
         position: absolute;
@@ -70,7 +71,7 @@ a{
   }
 }
 
-.scroll{
+#scroll{
   margin-top: 10%;
   p{
     margin: 0;
@@ -86,100 +87,151 @@ a{
 aside{
   height: 80px;
   background-color: #5474fd;
-  & a:nth-of-type(1){
-    font-family: 'Aleo', serif;
-    font-size: 24px;
-    margin: 1.5% 35% 0 5%;
-  }
-  a{
-   color: white;
-   text-transform: uppercase;
-   display: inline-block;
-   margin-left: 5%;
-  }
-  a:hover{
-    color: yellow;
+  div{
+    max-width: 1110px;
+    margin: 0 auto;
+    }
+   & a:nth-of-type(1){
+     font-family: 'Aleo', serif;
+     font-size: 24px;
+     margin: 2.2% 32.75% 0 0%;
+   }
+   a{
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: 4%;
+   }
+   a:hover{
+     color: yellow;
   }
 }
 
-.section1{
+#section1{
   height: 680px;
   background-image: url('../IMG/imgsection1.jpg');
   background-position: center;
   color: white;
   font-size: 16px;
+  line-height: 26px;
 }
 
-.container{
+#sec1container{
   max-width: 1110px;
   margin: 0 auto;
-  position: relative;
-  font-size: 16px;
-   p{
-     position: absolute;
-     display: block;
-   }
-   & p:nth-of-type(1){
-    font-family: 'Aleo', serif;
-    font-size: 36px;
-    top: 50%;
-   }
-   & p:nth-of-type(2){
-    width: 40%;
-    top: 90%;
+  display: flex;
+  div{
+    max-width: 570px;
     letter-spacing: 3px;
-   }
-   & p:nth-of-type(3){
-    width: 40%;
-    top: 130%;
-    letter-spacing: 3px;
-   }
+    & p:nth-of-type(1){
+      font-family: 'Aleo', serif;
+      font-size: 36px;
+      padding-top: 27%;
+    }
    button{
-     background-color: #5474fd;
-     width: 225px;
-     height: 60px;
-     position: absolute;
-     font-family: 'Aleo', serif;
-     text-transform: uppercase;
-     color: white;
-     border : none;
-     outline: none;
-     &:hover{
-       transform: scale(0.99);
-     }
-    top: 190%;
+    @include  button;
+    margin-top: 2%;
    }
+  }
 }
 
-.foto1{
+#sec1grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 120px 220px 220px;
+  gap: 5px 0;
+ }
+
+#foto1{
   height: 220px;
-  width: 360px;
+  width: 350px;
   background-image: url(../IMG/section1img1.jpg);
   background-position: center;
+  grid-row: 2/ 3;
+  grid-column: 2 / 5;
 }
 
-.foto1{
+#foto2{
   height: 220px;
   width: 350px;
   background-image: url(../IMG/section1img2.jpg);
   background-position: center;
+  grid-row: 3 / 4;
+  grid-column: 3 / 6;
 }
 
-.section2{
+#section2{
   height: 335px;
   background-color: #333333;
+}
+
+#sect2div{
+  max-width: 1110px;
+  margin: 0 auto;
   color: white;
   font-family: 'Aleo', serif;
   font-size: 36px;
   text-align: center;
   display: flex;
-  justify-content: space-around;
-  align-content: space-around;
+  justify-content: space-between;
   background-image: url(../IMG/sect2backg.svg);
   background-repeat: no-repeat;
-  background-position: 49% 15%;
+  background-position: 47% 20%;
   div{
-    margin-top: 5%;
+    margin-top: 10%;
   }
 }
- 
+
+#section3{
+  height: 700px;
+  background-image: url('../IMG/imgsection3.jpg');
+  background-position: center;
+}
+
+#sect3div{
+  max-width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 230px 370px;
+  div{
+    grid-row: 2/ 3;
+    @include div;
+    p{
+      padding-left: 4%;
+    }
+    p:nth-of-type(1){
+      font-size: 20px;
+      padding-top: 5%;
+    }
+    p:nth-of-type(2){
+      font-size: 22px;
+      font-family: 'Aleo', serif;
+      text-transform: uppercase;
+    }
+    button{
+      @include button;
+      margin: 20px 0 0 20px;
+    }
+
+  }
+}
+
+#section4{
+  height: 700px;
+  background-image: url('../IMG/imgsection4.jpg');
+  background-position: center;
+}
+
+#section5{
+  height: 730px;
+  background-image: url('../IMG/imgsection5.jpg');
+  background-position: center;
+}
+
+footer{
+  height: 270px;
+  background-color: #232323;
+}
+
+
+@import 'media.scss';
