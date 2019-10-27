@@ -17,7 +17,7 @@ a{
 #head{
   text-align: center;
   height: 740px;
-  background-image: url('../IMG/imghead.jpg');
+  background-image: url(../IMG/Imghead.jpg);
   background-position: center;
   color: white;
   font-size: 22px;
@@ -80,7 +80,7 @@ a{
     letter-spacing: 3px;
   }
 }
-.scroll:hover{
+#scroll:hover{
   transform: scale(0.9);
 }
 
@@ -109,7 +109,7 @@ aside{
 
 #section1{
   height: 680px;
-  background-image: url('../IMG/imgsection1.jpg');
+  background-image: url(../IMG/imgsection1.jpg);
   background-position: center;
   color: white;
   font-size: 16px;
@@ -184,7 +184,7 @@ aside{
 
 #section3{
   height: 700px;
-  background-image: url('../IMG/imgsection3.jpg');
+  background-image: url(../IMG/imgsection3.jpg);
   background-position: center;
 }
 
@@ -194,7 +194,7 @@ aside{
   display: grid;
   grid-template-rows: 230px 370px;
   div{
-    grid-row: 2/ 3;
+    grid-row: 2 / 3;
     @include div;
     p{
       padding-left: 4%;
@@ -218,14 +218,57 @@ aside{
 
 #section4{
   height: 700px;
-  background-image: url('../IMG/imgsection4.jpg');
+  background-image: url(../IMG/imgsection4.jpg);
   background-position: center;
+}
+
+#sect4div{
+  max-width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 230px 370px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 25px;
+  div{
+    grid-column: 2 / 3;
+    grid-row: 2/ 3;
+    @include div;
+    p{
+      padding-left: 4%;
+    }
+    p:nth-of-type(1){
+      font-size: 20px;
+      padding-top: 5%;
+    }
+    p:nth-of-type(2){
+      font-size: 22px;
+      font-family: 'Aleo', serif;
+      text-transform: uppercase;
+    }
+    button{
+      @include button;
+      margin: 20px 0 0 20px;
+    }
+
+  }
 }
 
 #section5{
   height: 730px;
-  background-image: url('../IMG/imgsection5.jpg');
+  background-image: url(../IMG/imgsection5.jpg);
   background-position: center;
+  text-align: center;
+  h2{
+    color: white;
+    font-size: 36px;
+    font-family: 'Aleo', serif;
+  }
+  display: grid;
+  grid-template-rows: 245px 285px;
+}
+
+#sect5div{
+  grid-row: 2/ 3;
 }
 
 footer{

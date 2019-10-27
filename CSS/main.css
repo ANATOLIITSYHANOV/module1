@@ -187,7 +187,7 @@ a {
 #head {
     text-align: center;
     height: 740px;
-    background-image: url("../IMG/imghead.jpg");
+    background-image: url(../IMG/Imghead.jpg);
     background-position: center;
     color: white;
     font-size: 22px;
@@ -258,7 +258,7 @@ a {
     letter-spacing: 3px;
 }
 
-.scroll:hover {
+#scroll:hover {
     transform: scale(0.9);
 }
 
@@ -291,7 +291,7 @@ aside a:hover {
 
 #section1 {
     height: 680px;
-    background-image: url("../IMG/imgsection1.jpg");
+    background-image: url(../IMG/imgsection1.jpg);
     background-position: center;
     color: white;
     font-size: 16px;
@@ -384,7 +384,7 @@ aside a:hover {
 
 #section3 {
     height: 700px;
-    background-image: url("../IMG/imgsection3.jpg");
+    background-image: url(../IMG/imgsection3.jpg);
     background-position: center;
 }
 
@@ -396,7 +396,7 @@ aside a:hover {
 }
 
 #sect3div div {
-    grid-row: 2/ 3;
+    grid-row: 2 / 3;
     height: 370px;
     width: 540px;
     background-color: #292422;
@@ -442,14 +442,82 @@ aside a:hover {
 
 #section4 {
     height: 700px;
-    background-image: url("../IMG/imgsection4.jpg");
+    background-image: url(../IMG/imgsection4.jpg);
     background-position: center;
+}
+
+#sect4div {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 230px 370px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 25px;
+}
+
+#sect4div div {
+    grid-column: 2 / 3;
+    grid-row: 2/ 3;
+    height: 370px;
+    width: 540px;
+    background-color: #292422;
+    opacity: 0.9;
+    color: white;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+#sect4div div p {
+    padding-left: 4%;
+}
+
+#sect4div div p:nth-of-type(1) {
+    font-size: 20px;
+    padding-top: 5%;
+}
+
+#sect4div div p:nth-of-type(2) {
+    font-size: 22px;
+    font-family: 'Aleo', serif;
+    text-transform: uppercase;
+}
+
+#sect4div div button {
+    background-color: #5474fd;
+    width: 225px;
+    height: 60px;
+    position: absolute;
+    font-family: 'Aleo', serif;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 20px 0 0 20px;
+}
+
+#sect4div div button:active {
+    color: #5474fd;
+    background-color: white;
 }
 
 #section5 {
     height: 730px;
-    background-image: url("../IMG/imgsection5.jpg");
+    background-image: url(../IMG/imgsection5.jpg);
     background-position: center;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 245px 285px;
+}
+
+#section5 h2 {
+    color: white;
+    font-size: 36px;
+    font-family: 'Aleo', serif;
+}
+
+#sect5div {
+    grid-row: 2/ 3;
 }
 
 footer {
