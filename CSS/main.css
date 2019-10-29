@@ -207,7 +207,11 @@ a {
 
 #head form {
     margin-top: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -216,6 +220,7 @@ a {
     width: 500px;
     height: 60px;
     border: 2px solid white;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 9%;
     font-size: 16px;
@@ -228,6 +233,7 @@ a {
     border: none;
     outline: none;
     border: 2px solid white;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #5474fd;
     color: white;
@@ -237,6 +243,8 @@ a {
 }
 
 #head form button:active img {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
 
@@ -260,6 +268,8 @@ a {
 }
 
 #scroll:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -290,6 +300,10 @@ aside a:hover {
     color: yellow;
 }
 
+#aside2 {
+    display: none;
+}
+
 #section1 {
     height: 680px;
     background-image: url(../IMG/trysect1.jpg);
@@ -302,6 +316,8 @@ aside a:hover {
 #sec1container {
     max-width: 1110px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -326,6 +342,7 @@ aside a:hover {
     color: white;
     border: none;
     outline: none;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     margin-top: 2%;
 }
@@ -371,7 +388,11 @@ aside a:hover {
     font-family: 'Aleo', serif;
     font-size: 36px;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     background-image: url(../IMG/sect2backg.svg);
     background-repeat: no-repeat;
@@ -440,6 +461,7 @@ aside a:hover {
     color: white;
     border: none;
     outline: none;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     margin: 20px 0 0 20px;
 }
@@ -501,6 +523,7 @@ aside a:hover {
     color: white;
     border: none;
     outline: none;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     margin: 20px 0 0 20px;
 }
@@ -577,4 +600,252 @@ footer p:nth-child(2) {
 
 footer a {
     padding: 0 8px;
+}
+
+@media screen and (max-width: 1160px) {
+    #head h1 {
+        padding-top: 24%;
+    }
+
+    #foto2 {
+        grid-column: 2 / 5;
+    }
+
+    aside a:nth-of-type(1) {
+        margin: 2.2% 15% 0 3%;
+    }
+
+    #sec1container {
+        margin-left: 3%;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    #head h1 {
+        padding-top: 30%;
+    }
+
+    aside a:nth-of-type(1) {
+        margin: 3% 5% 0 3%;
+    }
+
+    #foto1 {
+        grid-column: 1 / 4;
+    }
+
+    #foto2 {
+        grid-column: 1 / 4;
+    }
+
+    #sect5div div:nth-of-type(2) {
+        line-height: 22px;
+        letter-spacing: 0.75px;
+    }
+
+    #section5 h2 {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    #head h1 {
+        padding-top: 36%;
+    }
+
+    #head form input {
+        width: 300px;
+        padding-left: 2%;
+    }
+
+    aside div {
+        display: none;
+    }
+
+    #aside2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+
+    #aside2 p {
+        display: inline-block;
+        font-size: 30px;
+        margin: 0;
+        padding: 30px 0 0 0;
+    }
+
+    #sec1container {
+        display: block;
+        position: relative;
+    }
+
+    #sec1container div {
+        max-width: 700px;
+        margin: 0 auto;
+        padding-top: 3%;
+    }
+
+    #sec1container div p:nth-of-type(1) {
+        font-size: 20px;
+        padding-top: 0;
+        margin: 0;
+    }
+
+    #sec1container div p {
+        letter-spacing: 0.75px;
+    }
+
+    #sec1container div button {
+        width: 180px;
+    }
+
+    #foto1 {
+        height: 220px;
+        width: 350px;
+        background-size: cover;
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+
+    #foto2 {
+        height: 220px;
+        width: 350px;
+        background-size: cover;
+        position: absolute;
+        top: 55%;
+        right: 5%;
+    }
+
+    #sect2div {
+        font-size: 30px;
+    }
+
+    #section5 {
+        display: block;
+    }
+
+    #section5 h2 {
+        font-size: 26px;
+        margin-top: 0;
+        padding: 7% 0;
+    }
+
+    #sect5div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    #sect5div div:nth-of-type(2) {
+        width: 445px;
+        height: 283px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #head h1 {
+        padding-top: 65%;
+    }
+
+    #head form input {
+        width: 230px;
+        padding-left: 2%;
+    }
+
+    #head form button {
+        width: 100px;
+        text-align: justify;
+    }
+
+    #head form button img {
+        right: 2%;
+        top: 34%;
+    }
+
+    #sec1container div p:nth-of-type(1) {
+        font-size: 18px;
+    }
+
+    #sec1container div p {
+        line-height: 16px;
+        letter-spacing: 0.75px;
+    }
+
+    #sec1container div button {
+        height: 40px;
+    }
+
+    #sect2div {
+        font-size: 30px;
+    }
+
+    #sect2div div {
+        margin-top: 20%;
+    }
+
+    #sect3div div {
+        height: 370px;
+        width: 450px;
+    }
+
+    #sect4div div {
+        height: 370px;
+        width: 450px;
+        grid-column: 1 / 2;
+    }
+
+    #foto1 {
+        height: 143px;
+        width: 230px;
+        background-size: cover;
+        top: 36%;
+        left: 1px;
+    }
+
+    #foto2 {
+        height: 143px;
+        width: 230px;
+        background-size: cover;
+        top: 60%;
+        left: 3px;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    #sect3div div {
+        height: 450px;
+        width: 270px;
+    }
+
+    #sect4div div {
+        height: 450px;
+        width: 270px;
+    }
+
+    #section5 h2 {
+        padding: 2%;
+    }
+
+    #sect5div div:nth-of-type(1) {
+        background-size: cover;
+        width: 270px;
+    }
+
+    #sect5div div:nth-of-type(2) {
+        width: 270px;
+        height: 283px;
+    }
 }

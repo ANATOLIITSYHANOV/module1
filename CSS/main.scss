@@ -35,7 +35,6 @@ a{
     margin-top: 2%;
     display: flex;
     justify-content: center;
-    
     input{
       display: inline-block;
       width: 500px;
@@ -106,6 +105,10 @@ aside{
    a:hover{
      color: yellow;
   }
+}
+
+#aside2{
+  display: none;
 }
 
 #section1{
