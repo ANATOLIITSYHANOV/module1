@@ -915,6 +915,7 @@ footer a {
     }
 
     #sect2div {
+        background-image: inherit;
         font-size: 30px;
     }
 
@@ -990,6 +991,6 @@ footer a {
 
     #sect5div div:nth-of-type(2) {
         width: 270px;
-        height: 330px;
+        height: 345px;
     }
 }
