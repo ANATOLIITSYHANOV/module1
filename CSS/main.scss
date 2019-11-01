@@ -87,7 +87,7 @@ a{
 aside{
   height: 80px;
   background-color: #5474fd;
-  div{
+  #aside{
     max-width: 1110px;
     margin: 0 auto;
     }
@@ -103,12 +103,12 @@ aside{
     margin-left: 4%;
    }
    a:hover{
-     color: yellow;
+     color: rgba(0,0,0,.6);
   }
 }
 
 #aside2{
-  display: none;
+ display: none;
 }
 
 #section1{
@@ -295,9 +295,12 @@ aside{
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 1.5px;
+    span{
+      margin-left: 20px;
+    }
   } 
   p{
-    margin: 4%;
+    margin: 4% 6%;
   }
   p:nth-of-type(1){
     font-size: 20px;

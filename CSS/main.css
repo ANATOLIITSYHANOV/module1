@@ -278,7 +278,7 @@ aside {
     background-color: #5474fd;
 }
 
-aside div {
+aside #aside {
     max-width: 1110px;
     margin: 0 auto;
 }
@@ -297,7 +297,7 @@ aside a {
 }
 
 aside a:hover {
-    color: yellow;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 #aside2 {
@@ -571,8 +571,12 @@ aside a:hover {
     letter-spacing: 1.5px;
 }
 
+#sect5div div:nth-of-type(2) span {
+    margin-left: 20px;
+}
+
 #sect5div p {
-    margin: 4%;
+    margin: 4% 6%;
 }
 
 #sect5div p:nth-of-type(1) {
@@ -618,6 +622,14 @@ footer a {
     #sec1container {
         margin-left: 3%;
     }
+
+    #sect5div div:nth-of-type(2) {
+        line-height: 24px;
+    }
+
+    #sect5div p {
+        margin: 4% 4%;
+    }
 }
 
 @media screen and (max-width: 935px) {
@@ -638,7 +650,7 @@ footer a {
     }
 
     #sect5div div:nth-of-type(2) {
-        line-height: 22px;
+        line-height: 20px;
         letter-spacing: 0.75px;
     }
 
@@ -657,26 +669,139 @@ footer a {
         padding-left: 2%;
     }
 
-    aside div {
+    aside {
+        height: 80px;
+        background-color: #5474fd;
+    }
+
+    aside #aside {
         display: none;
     }
 
-    #aside2 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
+    aside a:nth-of-type(1) {
+        font-family: inherit;
+        font-size: inherit;
+        margin: 0;
     }
 
-    #aside2 p {
+    aside a {
+        color: white;
+        text-transform: uppercase;
+        display: block;
+        margin-left: 0;
+    }
+
+    aside a:hover {
+        color: white;
+    }
+
+    #aside2 {
+        display: block;
+        position: relative;
+    }
+
+    #aside2 .wrapper {
+        margin-left: 3%;
+        max-width: 100%;
+        position: relative;
+        height: 80px;
+    }
+
+    #aside2 #check-menu {
+        display: none;
+    }
+
+    #aside2 label {
         display: inline-block;
-        font-size: 30px;
-        margin: 0;
-        padding: 30px 0 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 3;
+        font-size: 24px;
+    }
+
+    #aside2 label span {
+        display: inline-block;
+        padding: 29px 0 0 20px;
+    }
+
+    #aside2 .burger-line {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        width: 40px;
+        height: 4px;
+        background-color: #fff;
+        -webkit-transition: .5s all;
+        -o-transition: .5s all;
+        transition: .5s all;
+    }
+
+    #aside2 .second, #aside2 .third {
+        top: 35px;
+    }
+
+    #aside2 .fourth {
+        top: 45px;
+    }
+
+    #aside2 .main-menu {
+        display: block;
+        position: absolute;
+        width: 250px;
+        bottom: 0;
+        left: 0;
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        max-height: 0;
+        font-size: 0;
+        overflow: hidden;
+        -webkit-transition: .5s all;
+        -o-transition: .5s all;
+        transition: .5s all;
+        z-index: 2;
+    }
+
+    #aside2 a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-top: 1px solid #473d35;
+        background-color: #5474fd;
+        opacity: .9;
+    }
+
+    #aside2 a:hover {
+        opacity: 1;
+    }
+
+    #aside2 #check-menu:checked ~ .main-menu {
+        max-height: 500px;
+        font-size: 16px;
+    }
+
+    #aside2 #check-menu:checked ~ .first {
+        display: none;
+    }
+
+    #aside2 #check-menu:checked ~ .second {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    #aside2 #check-menu:checked ~ .third {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    #aside2 #check-menu:checked ~ .fourth {
+        display: none;
     }
 
     #sec1container {
@@ -698,6 +823,7 @@ footer a {
 
     #sec1container div p {
         letter-spacing: 0.75px;
+        line-height: 22px;
     }
 
     #sec1container div button {
@@ -765,8 +891,9 @@ footer a {
     }
 
     #head form button {
-        width: 100px;
+        width: 120px;
         text-align: justify;
+        padding-left: 20px;
     }
 
     #head form button img {
@@ -863,6 +990,6 @@ footer a {
 
     #sect5div div:nth-of-type(2) {
         width: 270px;
-        height: 283px;
+        height: 330px;
     }
 }
